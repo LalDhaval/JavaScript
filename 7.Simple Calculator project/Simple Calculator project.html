@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator project</title>
+</head>
+
+<body>
+    <input type="number" name="name" id="first" step="any" />
+    <Select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </Select>
+    <input type="number" name="second" id="second" step="any" />
+    <br>
+    <br>
+    <button onclick="cal()">Calculate</button>
+    <input type="text" name="" id="Res" readonly>
+
+
+    <script type="text/javascript">
+        function cal(){
+var opr1 = document.getElementById('first').value;
+var opr2 = document.getElementById('second').value;
+var ope =  document.getElementById('ope').value;
+if(ope == '+'){
+    var Res = parseInt(opr1) + parseInt(opr2);
+}
+if(ope == '-'){
+    var Res = parseInt(opr1) - parseInt(opr2);
+}
+if(ope == '*'){
+    var Res = parseInt(opr1) * parseInt(opr2);
+}
+if(ope == '/'){
+    var Res = parseInt(opr1) / parseInt(opr2);
+}
+document.getElementById('Res').value = Res;
+        
+
+}
+
+    </script>
+</body>
+
+</html>

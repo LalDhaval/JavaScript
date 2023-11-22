@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user difine function</title>
+</head>
+
+<body>
+    <input type="text" name="name" id="name">
+    <button onclick="Greet()">Greet</button>
+    <div class="Greet"></div>
+
+    <script type="text/javascript">
+        function Greet() {
+            var name = document.getElementById('name').value;
+            var string = "Hello! " + name;
+            document.getElementsByClassName('Greet')[0].innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>
